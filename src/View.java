@@ -112,6 +112,14 @@ public class View {
         return true;
     }
 
+    /**
+     * Muestra la gasolina restante
+     * de un coche
+     * @param matricula matrícula del coche
+     * @param litros litros de gasolina
+     * @return true si se muestra correctamente
+     */
+
     public boolean mostrarGasolina(String matricula, double litros){
         System.out.println(matricula + ": " + litros + " litros de gasolina");
         return true;

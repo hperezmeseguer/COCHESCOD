@@ -80,6 +80,13 @@ public class Controller {
         return hecho;
     }
 
+    /**
+     * Carga gasolina a un coche
+     * @param matricula matrícula del coche
+     * @param litros litros a cargar
+     * @return true si se carga correctamente
+     */
+
     public boolean cargarGasolina(String matricula, double litros){
 
         double total =
