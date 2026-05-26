@@ -43,6 +43,7 @@ public class Model {
     public int cambiarVelocidad(String matricula, Integer v) {
         // busca el coche
         getCoche(matricula).velocidad = v;
+        System.out.println(" LOG esta haciendose");
         // retorna la nueva velocidad
         return getCoche(matricula).velocidad;
     }
@@ -54,5 +55,28 @@ public class Model {
      */
     public int getVelocidad(String matricula) {
         return getCoche(matricula).velocidad;
+    }
+
+    /**
+     * Hace avanzar el coche
+     * sumando metros recorridos
+     * @param matricula matrícula del coche
+     * @param metros metros a avanzar
+     * @return metros recorridos totales
+     */
+    public int avanzar(String matricula, int metros) {
+        getCoche(matricula).metrosRecorridos += metros;
+
+        return getCoche(matricula).metrosRecorridos;
+    }
+
+    /**
+     * Devuelve los metros recorridos
+     * de un coche
+     * @param matricula matrícula del coche
+     * @return metros recorridos
+     */
+    public int getMetros(String matricula) {
+        return getCoche(matricula).metrosRecorridos;
     }
 }
