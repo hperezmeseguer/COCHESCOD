@@ -79,4 +79,15 @@ public class Controller {
 
         return hecho;
     }
+
+    public boolean cargarGasolina(String matricula, double litros){
+
+        double total =
+                miModel.cargarGasolina(matricula, litros);
+
+        boolean hecho =
+                miView.mostrarGasolina(matricula, total);
+
+        return hecho;
+    }
 }

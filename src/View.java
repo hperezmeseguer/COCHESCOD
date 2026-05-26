@@ -65,8 +65,25 @@ public class View {
                         System.out.println("Algo ha fallado");
                     }
                 }
+
+                case 4 -> {
+
+                    System.out.println("Matricula: ");
+                    String matricula = new Scanner(System.in).next();
+
+                    System.out.println("Litros a cargar: ");
+                    double litros = new Scanner(System.in).nextDouble();
+
+                    boolean a = c.cargarGasolina(matricula, litros);
+
+                    if (a == true) {
+                        System.out.println("Gasolina cargada correctamente");
+                    } else {
+                        System.out.println("Algo ha fallado");
+                    }
+                }
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
     }
 
     /**
@@ -92,6 +109,11 @@ public class View {
 
         System.out.println(matricula + ": " + metros + " metros recorridos");
 
+        return true;
+    }
+
+    public boolean mostrarGasolina(String matricula, double litros){
+        System.out.println(matricula + ": " + litros + " litros de gasolina");
         return true;
     }
 }

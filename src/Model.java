@@ -64,10 +64,30 @@ public class Model {
      * @param metros metros a avanzar
      * @return metros recorridos totales
      */
-    public int avanzar(String matricula, int metros) {
-        getCoche(matricula).metrosRecorridos += metros;
+    /**
+     * Hace avanzar el coche
+     * sumando metros recorridos
+     * y gastando gasolina
+     *
+     * @param matricula matrícula del coche
+     * @param metros metros a avanzar
+     * @return metros recorridos totales
+     */
 
-        return getCoche(matricula).metrosRecorridos;
+    public int avanzar(String matricula, int metros) {
+
+        Coche coche = getCoche(matricula);
+
+        double consumo = metros * 0.01;
+
+        if(coche.gasolina >= consumo){
+
+            coche.metrosRecorridos += metros;
+
+            coche.gasolina -= consumo;
+        }
+
+        return coche.metrosRecorridos;
     }
 
     /**
@@ -78,5 +98,20 @@ public class Model {
      */
     public int getMetros(String matricula) {
         return getCoche(matricula).metrosRecorridos;
+    }
+
+    /**
+     * Carga gasolina a un coche
+     *
+     * @param matricula matrícula del coche
+     * @param litros litros añadidos
+     * @return gasolina total
+     */
+
+    public double cargarGasolina(String matricula, double litros){
+
+        getCoche(matricula).gasolina += litros;
+
+        return getCoche(matricula).gasolina;
     }
 }
