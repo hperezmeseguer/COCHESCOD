@@ -1,3 +1,7 @@
+![Captura desde 2026-05-26 13-59-57.png](../../Im%C3%A1genes/Capturas%20de%20pantalla/Captura%20desde%202026-05-26%2013-59-57.png)
+![Captura desde 2026-05-26 14-00-23.png](../../Im%C3%A1genes/Capturas%20de%20pantalla/Captura%20desde%202026-05-26%2014-00-23.png)
+
+
 # Arquitectura MVC
 
 Aplicación que trabaja con objetos coches, modifica la velocidad y la muestra
